@@ -1,0 +1,133 @@
+.container {
+  background-color: grey;
+  padding-bottom: 1em;
+
+}
+
+.top-bar {
+  background-color: #36383a;
+}
+
+.hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+    padding: 1.5em;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.blue-bar {
+  background-color: #42b0e4;
+}
+
+.jobs-available-container {
+  background-color: #1278a8;
+  margin: 5px 2%;
+  padding: 0.8em 0.4em;
+  border-radius: 5px;
+
+}
+
+.jobs-available {
+  color: #FFF;
+  font-size: 18px;
+}
+
+.job-info-container {
+  background-color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+.company-info {
+  /* margin-top: 1em; */
+}
+
+.logo {
+  /* padding: 0 1em; */
+  text-align: center;
+  /* padding-top: 10px; */
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.company-name {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: grey;
+  line-height: 1.8;
+}
+
+.wage {
+  color: grey;
+  line-height: 1.8;
+}
+
+.work-period {
+  color: grey;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.warning {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.work-schedule {
+  color: grey;
+  margin-top: 1em;
+}
+
+.work-date {
+  display: inline-block;
+  margin-left: 5px;
+  width: 65px;
+}
+
+.work-zone {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.location-header, .branch-header {
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  padding-top: 0.1em;
+  border-top: 2px solid grey;
+}
+
+.location-value, .branch-phone {
+  text-decoration: underline;
+  color: #42b0e4;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+
+.button-container {
+  padding: 3em 0 2em 0;
+  border-top: 2px solid grey;
+}
+
+.response-button {
+  text-align: center;
+  color: #42b0e4;
+  font-weight: bold;
+}
+
+@media (max-width: 765px) {
+  .title, .company-name, .warning, .wage, .work-period {
+    font-size: 14px;
+  }
+}

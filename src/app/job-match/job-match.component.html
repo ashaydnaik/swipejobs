@@ -1,0 +1,67 @@
+<div class="container">
+
+	<div class="row top-bar">
+		<div class="col-9 col-sm-10 col-md-11"></div>
+		<div class="col-3 col-sm-2 col-md-1">
+			<div class="hamburger-icon">
+				<div class="inactive">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row blue-bar">
+		<div class="jobs-available-container">
+			<span class="jobs-available">Jobs Available</span>
+		</div>
+	</div>
+
+	<div class="job-info-container">
+
+		<div class="company-info">
+			<div class="row">
+				<div class="col-4 col-sm-3 col-md-2 logo py-2">
+					<img [src]="jobDetails?.company?.logo" width="112px" height="112px">
+				</div>
+				<div class="col-8 col-sm-9 col-md-10">
+					<div class="title">{{ jobDetails?.title }}</div>
+					<div class="company-name">{{ jobDetails?.company?.name }}</div>
+					<div class="wage">{{ jobDetails?.wagePerHourInCents / 100 | currency }}/hour</div>
+					<div class="work-period">{{ startDate | date:'EEE, MMM d' }} - {{ endDate | date:'EEE, MMM d' }}</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="warning">
+			<span>If you take this job, you are agreeing to work ALL DAYS.</span>
+		</div>
+
+		<table class="work-schedule">
+			<tr *ngFor="let shift of jobDetails?.shifts">
+				<td class="work-day">{{ shift.startDate | date:'EEE, ' }}</td>
+				<td class="work-date">{{ shift.startDate | date:'MMM d' }}</td>
+				<td class="work-time">{{ shift.startDate | date:'h.mm aa ' }}</td>
+				<td class="work-zone">PST</td>
+			</tr>
+		</table>
+
+		<div class="location-header">Location</div>
+		<div class="location-value">{{ jobDetails?.company?.address }} </div>
+
+		<div class="branch-header">Branch</div>
+		<div class="branch-value">{{ jobDetails?.branch }}</div>
+		<div class="branch-phone">{{ jobDetails?.branchPhoneNumber }}</div>
+
+		<div class="button-container">
+			<div class="row">
+				<div class="col response-button">NO THANKS</div>
+				<div class="col response-button">I'LL TAKE IT</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
